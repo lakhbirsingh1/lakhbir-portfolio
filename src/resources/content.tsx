@@ -8,7 +8,7 @@ const person: Person = {
   role: "Visual Designer",
   avatar: "/images/avatar.png",
   email: "singh0167p@gmail.com",
- // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Hindi", "Punjabi"], // optional: Leave the array empty if you don't want to display languages
   locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
@@ -101,7 +101,7 @@ const about: About = {
     description: (
       <>
         <>
-        I help brands and businesses create engaging motion graphics, product demo videos, social media content, UI animations, and modern websites that deliver clear, impactful visual experiences.
+          I help brands and businesses create engaging motion graphics, product demo videos, social media content, UI animations, and modern websites that deliver clear, impactful visual experiences.
         </>
       </>
     ),
@@ -290,6 +290,11 @@ const gallery: Gallery = {
       src: "/images/gallery/vertical-2.mp4",
       alt: "image",
       orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.mp4",
+      alt: "image",
+      orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-2.mp4",
