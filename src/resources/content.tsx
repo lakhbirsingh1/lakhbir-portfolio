@@ -297,7 +297,7 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-4.jpg",
+      src: "/images/gallery/horizontal-4.mp4",
       alt: "image",
       orientation: "horizontal",
     },
