@@ -287,7 +287,7 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
+      src: "/images/gallery/vertical-2.mp4",
       alt: "image",
       orientation: "vertical",
     },
