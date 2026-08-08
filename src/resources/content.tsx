@@ -127,7 +127,7 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/projects/project-01/cover-01.png",
+            src: "/images/projects/project-01/NextRole.png",
             alt: "Portfolio Project",
             width: 16,
             height: 9,
@@ -213,6 +213,9 @@ const about: About = {
           {
             name: "Short-form Video",
           },
+          {
+            name: "Long-form Video",
+          },
         ],
       },
       {
@@ -267,7 +270,7 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
 
-        {
+    {
       src: "/images/gallery/horizontal-5.mp4",
       alt: "image",
       orientation: "horizontal",
@@ -282,7 +285,7 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "vertical",
     },
-      {
+    {
       src: "/images/gallery/horizontal-1.mp4",
       alt: "image",
       orientation: "horizontal",
@@ -298,12 +301,12 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "horizontal",
     },
-        {
+    {
       src: "/images/gallery/horizontal-3.mp4",
       alt: "image",
       orientation: "horizontal",
     },
-        {
+    {
       src: "/images/gallery/vertical-3.mp4",
       alt: "image",
       orientation: "vertical",
