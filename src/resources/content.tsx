@@ -266,8 +266,9 @@ const gallery: Gallery = {
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
-    {
-      src: "/images/gallery/horizontal-1.mp4",
+
+        {
+      src: "/images/gallery/horizontal-5.mp4",
       alt: "image",
       orientation: "horizontal",
     },
@@ -286,31 +287,38 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "vertical",
     },
+      {
+      src: "/images/gallery/horizontal-1.mp4",
+      alt: "image",
+      orientation: "horizontal",
+    },
     {
       src: "/images/gallery/vertical-2.mp4",
       alt: "image",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/horizontal-3.mp4",
-      alt: "image",
-      orientation: "horizontal",
-    },
+
     {
       src: "/images/gallery/horizontal-2.mp4",
       alt: "image",
       orientation: "horizontal",
+    },
+        {
+      src: "/images/gallery/horizontal-3.mp4",
+      alt: "image",
+      orientation: "horizontal",
+    },
+        {
+      src: "/images/gallery/vertical-3.mp4",
+      alt: "image",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-4.mp4",
       alt: "image",
       orientation: "horizontal",
     },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+
   ],
 };
 
