@@ -132,6 +132,24 @@ const about: About = {
             width: 16,
             height: 9,
           },
+          {
+            src: "/images/projects/project-01/Bislova.png",
+            alt: "Portfolio Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/Realestate.png",
+            alt: "Portfolio Project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/WorldOrder.png",
+            alt: "Portfolio Project",
+            width: 16,
+            height: 9,
+          },
         ],
       },
 
