@@ -289,7 +289,7 @@ const gallery: Gallery = {
   images: [
 
     {
-      src: "/images/gallery/horizontal-5.mp4",
+      src: "/images/gallery/ai-logo.mp4",
       alt: "image",
       orientation: "horizontal",
     },
@@ -303,6 +303,12 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "horizontal",
     },
+    {
+      src: "/images/gallery/horizontal-5.mp4",
+      alt: "image",
+      orientation: "horizontal",
+    },
+
     {
       src: "/images/gallery/vertical-1.mp4",
       alt: "image",
