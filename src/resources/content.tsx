@@ -287,9 +287,18 @@ const gallery: Gallery = {
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
-
+    {
+      src: "/images/gallery/gemini.mp4",
+      alt: "image",
+      orientation: "horizontal",
+    },
     {
       src: "/images/gallery/ai-logo.mp4",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/nextrole-v3.mp4",
       alt: "image",
       orientation: "horizontal",
     },
@@ -299,52 +308,48 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal.mp4",
+      src: "/images/gallery/nextrole-v2.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-5.mp4",
+      src: "/images/gallery/bislova-h.mp4",
       alt: "image",
       orientation: "horizontal",
     },
 
     {
-      src: "/images/gallery/vertical-1.mp4",
+      src: "/images/gallery/realestate.mp4",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-1.mp4",
+      src: "/images/gallery/3d-coin.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-2.mp4",
+      src: "/images/gallery/realestate2.mp4",
       alt: "image",
       orientation: "vertical",
     },
 
     {
-      src: "/images/gallery/horizontal-2.mp4",
+      src: "/images/gallery/nextrole-v1.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-3.mp4",
+      src: "/images/gallery/new-w-order.mp4",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.mp4",
+      src: "/images/gallery/bislova-v.mp4",
       alt: "image",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/horizontal-4.mp4",
-      alt: "image",
-      orientation: "horizontal",
-    },
+
 
   ],
 };
