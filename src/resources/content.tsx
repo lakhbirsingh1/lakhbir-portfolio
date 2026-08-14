@@ -292,21 +292,27 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "horizontal",
     },
+        {
+      src: "/images/gallery/skin-care.mp4",
+      alt: "image",
+      orientation: "vertical",
+    },
     {
       src: "/images/gallery/ai-logo.mp4",
       alt: "image",
       orientation: "horizontal",
+    },
+        {
+      src: "/images/gallery/opecia-oil.mp4",
+      alt: "image",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/nextrole-v3.mp4",
       alt: "image",
       orientation: "horizontal",
     },
-    {
-      src: "/images/gallery/skin-care.mp4",
-      alt: "image",
-      orientation: "vertical",
-    },
+
     {
       src: "/images/gallery/nextrole-v2.mp4",
       alt: "image",
