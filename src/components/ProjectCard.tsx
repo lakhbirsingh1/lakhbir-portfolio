@@ -6,9 +6,9 @@ import {
   Column,
   Flex,
   Heading,
-  SmartLink,
   Text,
 } from "@once-ui-system/core";
+import { trackClick } from "@/lib/analytics/track-interaction";
 
 interface ProjectCardProps {
   href: string;
@@ -28,17 +28,37 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   content,
   description,
   avatars,
-  link,
 }) => {
+  const handleProjectClick = () => {
+    void trackClick({
+      eventName: "Project Click",
+      elementId: "project-card",
+      elementText: title,
+      targetUrl: href,
+      metadata: {
+        project: title,
+        projectUrl: href,
+      },
+    });
+  };
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
+      <div
+        onClick={handleProjectClick}
+        style={{
+          cursor: "pointer",
+        }}
+      >
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={images.map((image) => ({
+            slide: image,
+            alt: title,
+          }))}
+        />
+      </div>
+
       <Flex
         s={{ direction: "column" }}
         fillWidth
@@ -48,32 +68,44 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+          <Flex
+            flex={5}
+            onClick={handleProjectClick}
+            style={{
+              cursor: "pointer",
+            }}
+          >
+            <Heading
+              as="h2"
+              wrap="balance"
+              variant="heading-strong-xl"
+            >
               {title}
             </Heading>
           </Flex>
         )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+
+        {(avatars?.length > 0 ||
+          description?.trim() ||
+          content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+            {avatars?.length > 0 && (
+              <AvatarGroup
+                avatars={avatars}
+                size="m"
+                reverse
+              />
+            )}
+
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text
+                wrap="balance"
+                variant="body-default-s"
+                onBackground="neutral-weak"
+              >
                 {description}
               </Text>
             )}
-            {/* <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
-                >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-          
-            </Flex> */}
           </Column>
         )}
       </Flex>

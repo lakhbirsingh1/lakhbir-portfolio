@@ -1,12 +1,71 @@
-import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
+"use client";
+
+import {
+  Icon,
+  Row,
+  Text,
+} from "@once-ui-system/core";
+
 import { person, social } from "@/resources";
+
+import {
+  trackExternalLink,
+  trackContact,
+} from "@/lib/analytics/track-interaction";
+
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleSocialClick = (
+    item: (typeof social)[number],
+  ) => {
+    if (!item.link) {
+      return;
+    }
+
+    const name = item.name.toLowerCase();
+
+    // ---------------------------------------------
+    // EMAIL
+    // ---------------------------------------------
+
+    if (name === "email") {
+      void trackContact({
+        type: "email",
+        value: item.link,
+      });
+
+      return;
+    }
+
+    // ---------------------------------------------
+    // EXTERNAL LINK
+    // ---------------------------------------------
+
+    if (item.link.startsWith("http")) {
+      void trackExternalLink({
+        name: item.name,
+        url: item.link,
+        elementId: `social-${name}`,
+        metadata: {
+          source: "footer",
+        },
+      });
+    }
+  };
+
   return (
-    <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
+    <Row
+      as="footer"
+      fillWidth
+      padding="8"
+      horizontal="center"
+      s={{
+        direction: "column",
+      }}
+    >
       <Row
         className={styles.mobile}
         maxWidth="m"
@@ -21,32 +80,90 @@ export const Footer = () => {
           align: "center",
         }}
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
+        {/* COPYRIGHT */}
+
+        <Text
+          variant="body-default-s"
+          onBackground="neutral-strong"
+        >
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI unless you have a Pro license. */}
+            © {currentYear} /
+          </Text>
+
+          <Text paddingX="4">
+            {person.name}
+          </Text>
+
+          <Text onBackground="neutral-weak">
             / Crafted with ❤️ using Next.js & Vercel.{" "}
-            <SmartLink href="https://lakhbir-portfolio.vercel.app/">Lakhbir.Visuals</SmartLink>
+            Lakhbir.Visuals
           </Text>
         </Text>
+
+        {/* SOCIAL LINKS */}
+
         <Row gap="16">
-          {social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
+          {social.map((item) => {
+            if (!item.link) {
+              return null;
+            }
+
+            const isEmail =
+              item.name.toLowerCase() === "email";
+
+            return (
+              <a
+                key={item.name}
+                href={item.link}
+                aria-label={item.name}
+                title={item.name}
+                onClick={() => {
+                  console.log(
+                    "FOOTER CLICK:",
+                    item.name,
+                  );
+
+                  handleSocialClick(item);
+                }}
+                style={{
+                  width: "32px",
+                  height: "32px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textDecoration: "none",
+                  color: "inherit",
+                  borderRadius: "50%",
+                  cursor: "pointer",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                >
+                  <Icon
+                    name={item.icon}
+                    size="s"
+                  />
+                </span>
+              </a>
+            );
+          })}
         </Row>
       </Row>
-      <Row height="80" hide s={{ hide: false }} />
+
+      <Row
+        height="80"
+        hide
+        s={{
+          hide: false,
+        }}
+      />
     </Row>
   );
 };

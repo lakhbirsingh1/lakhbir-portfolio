@@ -11,9 +11,11 @@ import {
   SocialSharingConfig,
   StyleConfig,
 } from "@/types";
+
 import { home, person, social } from "./content";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
+// IMPORTANT: Replace with your own domain address - it's used for SEO
+// in meta tags and schema
 const baseURL: string = "https://demo.magic-portfolio.com";
 
 const routes: RoutesConfig = {
@@ -22,6 +24,9 @@ const routes: RoutesConfig = {
   "/work": true,
   "/blog": true,
   "/gallery": true,
+
+  // Private analytics dashboard
+  "/analytics": true,
 };
 
 const display: DisplayConfig = {
@@ -34,6 +39,9 @@ const display: DisplayConfig = {
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+
+  // Private portfolio analytics dashboard
+  "/analytics": true,
 };
 
 // Import and set font for each variant
@@ -65,13 +73,14 @@ const code = Geist_Mono({
 });
 
 const fonts: FontsConfig = {
-  heading: heading,
-  body: body,
-  label: label,
-  code: code,
+  heading,
+  body,
+  label,
+  code,
 };
 
-// default customization applied to the HTML in the main layout.tsx
+// Default customization applied to the HTML
+// in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate | mint | rose | dusk | custom
@@ -88,10 +97,12 @@ const style: StyleConfig = {
 const dataStyle: DataStyleConfig = {
   variant: "gradient", // flat | gradient | outline
   mode: "categorical", // categorical | divergent | sequential
-  height: 24, // default chart height
+  height: 24,
+
   axis: {
     stroke: "var(--neutral-alpha-weak)",
   },
+
   tick: {
     fill: "var(--neutral-on-background-weak)",
     fontSize: 11,
@@ -106,6 +117,7 @@ const effects: EffectsConfig = {
     y: 0,
     radius: 100,
   },
+
   gradient: {
     display: false,
     opacity: 100,
@@ -117,12 +129,14 @@ const effects: EffectsConfig = {
     colorStart: "accent-background-strong",
     colorEnd: "page-background",
   },
+
   dots: {
     display: true,
     opacity: 40,
     size: "2",
     color: "brand-background-strong",
   },
+
   grid: {
     display: false,
     opacity: 100,
@@ -130,6 +144,7 @@ const effects: EffectsConfig = {
     width: "0.25rem",
     height: "0.25rem",
   },
+
   lines: {
     display: false,
     opacity: 100,
@@ -142,6 +157,7 @@ const effects: EffectsConfig = {
 
 const mailchimp: MailchimpConfig = {
   action: "https://url/subscribe/post?parameters",
+
   effects: {
     mask: {
       cursor: true,
@@ -149,6 +165,7 @@ const mailchimp: MailchimpConfig = {
       y: 0,
       radius: 100,
     },
+
     gradient: {
       display: true,
       opacity: 90,
@@ -160,12 +177,14 @@ const mailchimp: MailchimpConfig = {
       colorStart: "accent-background-strong",
       colorEnd: "static-transparent",
     },
+
     dots: {
       display: true,
       opacity: 20,
       size: "2",
       color: "brand-on-background-weak",
     },
+
     grid: {
       display: false,
       opacity: 100,
@@ -173,6 +192,7 @@ const mailchimp: MailchimpConfig = {
       width: "0.25rem",
       height: "0.25rem",
     },
+
     lines: {
       display: false,
       opacity: 100,
@@ -184,7 +204,8 @@ const mailchimp: MailchimpConfig = {
   },
 };
 
-// default schema data — pulls from content.tsx so there's one source of truth
+// Default schema data
+// Pulls from content.tsx so there's one source of truth
 const schema: SchemaConfig = {
   logo: "",
   type: "Person",
@@ -193,16 +214,23 @@ const schema: SchemaConfig = {
   email: person.email,
 };
 
-// social links — derived from the social array in content.tsx to avoid duplication
+// Social links
+// Derived from the social array in content.tsx
 const sameAs: SameAsConfig = {
-  threads: social.find((s) => s.name === "Threads")?.link ?? "",
-  linkedin: social.find((s) => s.name === "LinkedIn")?.link ?? "",
-  discord: social.find((s) => s.name === "Discord")?.link ?? "",
+  threads:
+    social.find((s) => s.name === "Threads")?.link ?? "",
+
+  linkedin:
+    social.find((s) => s.name === "LinkedIn")?.link ?? "",
+
+  discord:
+    social.find((s) => s.name === "Discord")?.link ?? "",
 };
 
-// social sharing configuration for blog posts
+// Social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
   display: true,
+
   platforms: {
     x: true,
     linkedin: true,
