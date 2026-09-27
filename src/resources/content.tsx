@@ -345,9 +345,9 @@ const gallery: Gallery = {
       alt: "Skin care video",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/ai-logo.mp4",
-      alt: "AI logo animation",
+        {
+      src: "/images/gallery/Lakhbir_Assignment.mp4",
+      alt: "Coaching",
       orientation: "horizontal",
     },
     {
@@ -375,11 +375,7 @@ const gallery: Gallery = {
       alt: "Skin care video",
       orientation: "vertical",
     },
-      {
-      src: "/images/gallery/Lakhbir_Assignment.mp4",
-      alt: "Coaching",
-      orientation: "horizontal",
-    },
+  
         {
       src: "/images/gallery/benchmark.mp4",
       alt: "Benchmark",
@@ -400,7 +396,13 @@ const gallery: Gallery = {
       alt: "3D coin animation",
       orientation: "horizontal",
     },
-    {
+  
+       {
+      src: "/images/gallery/ai-logo.mp4",
+      alt: "AI logo animation",
+      orientation: "horizontal",
+    },
+      {
       src: "/images/gallery/realestate2.mp4",
       alt: "Real estate video",
       orientation: "vertical",
