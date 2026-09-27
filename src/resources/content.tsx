@@ -360,10 +360,30 @@ const gallery: Gallery = {
       alt: "NextRole video",
       orientation: "horizontal",
     },
+     {
+      src: "/images/gallery/skillto_brand_intro-2.mp4",
+      alt: "Skin care video",
+      orientation: "vertical",
+    },
     {
       src: "/images/gallery/nextrole-v2.mp4",
       alt: "NextRole video",
       orientation: "horizontal",
+    },
+     {
+      src: "/images/gallery/skillto_brand_intro.mp4",
+      alt: "Skin care video",
+      orientation: "vertical",
+    },
+      {
+      src: "/images/gallery/Lakhbir_Assignment.mp4",
+      alt: "Coaching",
+      orientation: "horizontal",
+    },
+        {
+      src: "/images/gallery/benchmark.mp4",
+      alt: "Benchmark",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/bislova-h.mp4",
