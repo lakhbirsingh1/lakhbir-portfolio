@@ -340,16 +340,27 @@ const gallery: Gallery = {
       alt: "Gemini AI video",
       orientation: "horizontal",
     },
+         {
+      src: "/images/gallery/Emphasis_new.mp4",
+      alt: "Emphasis",
+      orientation: "vertical",
+    },
+            {
+      src: "/images/gallery/Lakhbir_Assignment.mp4",
+      alt: "Coaching",
+      orientation: "horizontal",
+    },
+         {
+      src: "/images/gallery/benchmark.mp4",
+      alt: "Benchmark",
+      orientation: "vertical",
+    },
     {
       src: "/images/gallery/skin-care.mp4",
       alt: "Skin care video",
       orientation: "vertical",
     },
-        {
-      src: "/images/gallery/Lakhbir_Assignment.mp4",
-      alt: "Coaching",
-      orientation: "horizontal",
-    },
+
     {
       src: "/images/gallery/opecia-oil.mp4",
       alt: "Opecia product video",
@@ -376,11 +387,7 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
   
-        {
-      src: "/images/gallery/benchmark.mp4",
-      alt: "Benchmark",
-      orientation: "vertical",
-    },
+   
     {
       src: "/images/gallery/bislova-h.mp4",
       alt: "Bislova AI video",
