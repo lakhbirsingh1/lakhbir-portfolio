@@ -355,20 +355,29 @@ const gallery: Gallery = {
       alt: "Benchmark",
       orientation: "vertical",
     },
+        {
+      src: "/images/gallery/nextrole-v3.mp4",
+      alt: "NextRole video",
+      orientation: "horizontal",
+    },
     {
       src: "/images/gallery/skin-care.mp4",
       alt: "Skin care video",
       orientation: "vertical",
     },
-
+  {
+      src: "/images/gallery/nextrole-v2.mp4",
+      alt: "NextRole video",
+      orientation: "horizontal",
+    },
     {
       src: "/images/gallery/opecia-oil.mp4",
       alt: "Opecia product video",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/nextrole-v3.mp4",
-      alt: "NextRole video",
+  {
+      src: "/images/gallery/3d-coin.mp4",
+      alt: "3D coin animation",
       orientation: "horizontal",
     },
      {
@@ -376,9 +385,9 @@ const gallery: Gallery = {
       alt: "Skin care video",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/nextrole-v2.mp4",
-      alt: "NextRole video",
+       {
+      src: "/images/gallery/ai-logo.mp4",
+      alt: "AI logo animation",
       orientation: "horizontal",
     },
      {
@@ -398,17 +407,9 @@ const gallery: Gallery = {
       alt: "Real estate AI video",
       orientation: "ai",
     },
-    {
-      src: "/images/gallery/3d-coin.mp4",
-      alt: "3D coin animation",
-      orientation: "horizontal",
-    },
   
-       {
-      src: "/images/gallery/ai-logo.mp4",
-      alt: "AI logo animation",
-      orientation: "horizontal",
-    },
+  
+  
       {
       src: "/images/gallery/realestate2.mp4",
       alt: "Real estate video",
@@ -419,10 +420,50 @@ const gallery: Gallery = {
       alt: "NextRole video",
       orientation: "horizontal",
     },
+           {
+      src: "/images/gallery/Plus_Pramesh.mp4",
+      alt: "Plus Pramesh",
+      orientation: "vertical",
+    },
+       {
+      src: "/images/gallery/Rishab_furnishing.mp4",
+      alt: "Rishab furnishing",
+      orientation: "vertical",
+    },
+     {
+      src: "/images/gallery/Sardar_Industries.mp4",
+      alt: "Sardar Industries",
+      orientation: "vertical",
+    },
     {
       src: "/images/gallery/new-w-order.mp4",
       alt: "World Order video",
       orientation: "horizontal",
+    },
+         {
+      src: "/images/gallery/emphasis_diwali.mp4",
+      alt: "emphasis diwali",
+      orientation: "vertical",
+    },
+            {
+      src: "/images/gallery/Maison_Miel_Bakes.mp4",
+      alt: "Maison Miel Bakes",
+      orientation: "vertical",
+    },
+                       {
+      src: "/images/gallery/Amritam_Triphala_Juice.mp4",
+      alt: "Amritam Triphala Juice",
+      orientation: "vertical",
+    },
+                {
+      src: "/images/gallery/Odisha_Handloom.mp4",
+      alt: "Odisha Handloom",
+      orientation: "vertical",
+    },
+                   {
+      src: "/images/gallery/Print_Masala.mp4",
+      alt: "Print Masala",
+      orientation: "vertical",
     },
     {
       src: "/images/gallery/bislova-v.mp4",
